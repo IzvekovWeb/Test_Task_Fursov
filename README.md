@@ -12,7 +12,27 @@
 
 В ответе прикрепить ссылку на репозиторий с проектом и тестами, в readme указать главные уязвимости и список багов.
 
-## Выполнение задания
+## Быстрый старт
+
+Установка зависимостей
+
+    pip install -r requirements.txt
+
+Запуск тестов
+
+    pytest
+
+    # Запуск конкретного теста
+    pytest tests/test_SpreadsheetAPI::test_get_sheet
+
+Проверка покрытия кода тестами
+
+    pytest --cov
+
+>работает эффективно, только когда все тесты пройдены
+
+
+## Результаты тестирования
 
 ### Багрепорт
 
@@ -98,7 +118,7 @@
     Дополнение  
 
 
-# Результаты работы
+# Badges
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/4a5ebc4b0aaf1d82c28d/maintainability)](https://codeclimate.com/github/IzvekovWeb/Test_Task_Fursov/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4a5ebc4b0aaf1d82c28d/test_coverage)](https://codeclimate.com/github/IzvekovWeb/Test_Task_Fursov/test_coverage)
