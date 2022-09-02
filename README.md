@@ -97,4 +97,8 @@
     Описание    Нет проверки на правильность входных данных
     Дополнение  
 
-# Test_Task_Fursov
+
+# Результаты работы
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/4a5ebc4b0aaf1d82c28d/maintainability)](https://codeclimate.com/github/IzvekovWeb/Test_Task_Fursov/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4a5ebc4b0aaf1d82c28d/test_coverage)](https://codeclimate.com/github/IzvekovWeb/Test_Task_Fursov/test_coverage)
