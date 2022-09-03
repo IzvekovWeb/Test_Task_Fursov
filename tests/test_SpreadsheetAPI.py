@@ -55,7 +55,6 @@ def test_get(spredsheet):
         spredsheet.get("1:C5")
 
 
-facke_get_range = 
 
 def test_insert(spredsheet):
 
