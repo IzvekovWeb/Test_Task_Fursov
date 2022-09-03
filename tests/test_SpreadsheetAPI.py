@@ -7,11 +7,12 @@ CREDENTIALS_FILE = 'credentials.json'
 APIS =  ['https://www.googleapis.com/auth/spreadsheets']
 
 
+@pytest.fixture
+def spredsheet():
+    return SpreadsheetAPI(SPREDSHEET_ID, "Лист1", 0, CREDENTIALS_FILE, APIS)
 
-spredsheet = SpreadsheetAPI(SPREDSHEET_ID, "Лист1", 0, CREDENTIALS_FILE, APIS)
 
-
-def test_get_sheet():
+def test_get_sheet(spredsheet):
     result = {'majorDimension': 'ROWS',
             'range': "'Лист1'!A1:Z1000",
             'values': [['1', '2', '3'],
@@ -21,7 +22,7 @@ def test_get_sheet():
     assert spredsheet.get_sheet() == result
 
 
-def test_get():
+def test_get(spredsheet):
     result = {'majorDimension': 'ROWS',
             'range': "'Лист1'!A1:C5",
             'values': [['1', '2', '3'],
@@ -54,7 +55,9 @@ def test_get():
         spredsheet.get("1:C5")
 
 
-def test_insert():
+facke_get_range = 
+
+def test_insert(spredsheet):
 
     # Создаём тестовый лист
     test_sheet_id = 123456
@@ -105,7 +108,7 @@ def test_insert():
     assert insert_result4 == True
 
 
-def test_clear():
+def test_clear(spredsheet):
 
     max_range = 'A1:E10'
     test_ranges = {
@@ -173,7 +176,7 @@ def test_clear():
         assert response['values'] == expected_result
 
 
-def test_get_sheet_url():
+def test_get_sheet_url(spredsheet):
 
     expected_result = 'https://docs.google.com/spreadsheets/d/' + SPREDSHEET_ID + '/edit#gid=0'
     assert spredsheet.get_sheet_url() == expected_result
